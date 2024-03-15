@@ -10,7 +10,7 @@ To run this application, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/pranjalhtpydev/PASAVER/tree/main]
+   git clone https://github.com/pranjalhtpydev/PASAVER.git
    ```
    
 2. Navigate to the project directory:
