@@ -10,7 +10,7 @@ To run this application, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/pranjalhtpydev/password-saver.git
+   git clone [https://github.com/pranjalhtpydev/PASAVER/tree/main]
    ```
    
 2. Navigate to the project directory:
