@@ -12,12 +12,16 @@
         color: #333;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
       .container {
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -29,7 +33,8 @@
         margin-bottom: 30px;
       }
 
-      input {
+      input,
+      button {
         width: 100%;
         padding: 12px;
         border: 1px solid #ddd;
@@ -47,11 +52,7 @@
       button {
         background-color: #4a90e2;
         color: #fff;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 5px;
         cursor: pointer;
-        margin-right: 10px;
         transition: background-color 0.3s ease;
       }
 
@@ -62,40 +63,6 @@
       button:disabled {
         background-color: #ccc;
         cursor: not-allowed;
-      }
-
-      #passwordList {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 30px;
-      }
-
-      #passwordList li {
-        background-color: #f7f7f7;
-        padding: 15px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      #passwordList li span {
-        flex-grow: 1;
-        margin-right: 15px;
-      }
-
-      #passwordList li button {
-        background-color: transparent;
-        color: #4a90e2;
-        border: none;
-        cursor: pointer;
-        transition: color 0.3s ease;
-      }
-
-      #passwordList li button:hover {
-        color: #3677c8;
       }
 
       #message {
@@ -126,7 +93,6 @@
       .reset-password:hover {
         color: #3677c8;
       }
-      
     </style>
   </head>
   <body>
@@ -146,22 +112,11 @@
         <button id="copyPassword" onclick="copyPassword()" disabled><i class="far fa-copy"></i> Copy Password</button>
         <button onclick="savePassword()"><i class="fas fa-save"></i> Save Password</button>
         <button onclick="signOut()"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
-        <button onclick="showSettingsModal()"><i class="fas fa-cog"></i> Settings</button>
       </div>
       <ul id="passwordList" style="display: none;"></ul>
       <div id="message"></div>
     </div>
 
-    <!-- Settings Modal -->
-   <!-- <div id="settingsModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeSettingsModal()">&times;</span>
-        <h2>Settings</h2>
-        <input type="text" id="displayName" placeholder="Enter your display name" />
-        <input type="file" id="profilePicture" accept="image/*" />
-        <button onclick="updateUserProfile()">Update Profile</button>
-      </div>
-    </div> -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
